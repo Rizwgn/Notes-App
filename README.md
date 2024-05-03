@@ -1,4 +1,4 @@
-# Notes-App
+🚀 Notes-App 🚀
 
 Check out my notes application I have created using JavaScript, HTML and CSS here at this link -> https://rizwgn.github.io/Notes-App/
 
