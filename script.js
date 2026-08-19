@@ -1,6 +1,4 @@
-/*************************************************************************
- * Create Note Popup Logic
- **************************************************************************/
+
 
 function popup() {
 
@@ -48,11 +46,6 @@ function createNote() {
     }
 }
 
-
-/*************************************************************************
- * Display Notes Logic
- **************************************************************************/
-
 function displayNotes() {
     const notesList = document.getElementById('notes-list');
     notesList.innerHTML = '';
@@ -72,10 +65,6 @@ function displayNotes() {
     });
 }
 
-
-/*************************************************************************
- * Edit Note Popup Logic
- **************************************************************************/
 
 function editNote(noteId) {
     const notes = JSON.parse(localStorage.getItem('notes')) || [];
@@ -121,20 +110,14 @@ function updateNote() {
             return note;
         });
 
-        // Update the notes in local storage
         localStorage.setItem('notes', JSON.stringify(updatedNotes));
 
-        // Close the editing popup
         editingPopup.remove();
 
-        // Refresh the displayed notes
         displayNotes();
     }
 }
 
-/*************************************************************************
- * Delete Note Logic
- **************************************************************************/
 
 function deleteNote(noteId) {
     let notes = JSON.parse(localStorage.getItem('notes')) || [];
